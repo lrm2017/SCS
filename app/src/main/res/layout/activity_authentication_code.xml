@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/my_title"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:background="@drawable/button_style"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="45dp"
+        android:text="返回"
+        android:textColor="#388e3c"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请输入短信认证码："
+        android:textSize="20sp"
+        android:layout_below="@+id/my_title"
+        android:layout_alignLeft="@+id/my_title"
+        android:layout_alignStart="@+id/my_title"
+        android:layout_marginTop="84dp"
+        android:id="@+id/textView" />
+
+    <Button
+        android:id="@+id/resend_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:text="重新发送"
+        android:textColor="#388e3c"
+        android:background="@android:color/transparent"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:hint="短信认证码"
+        android:background="@drawable/coners_bg"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="39dp"
+        android:id="@+id/editText" />
+
+    <Button
+        android:id="@+id/next_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="#388e3c"
+        android:text="下一步"
+        android:background="@drawable/button_style"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="115dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

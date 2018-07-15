@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:padding="10dp"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/head_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/header"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/identity_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:text="李狗蛋"/>
+
+</RelativeLayout>
