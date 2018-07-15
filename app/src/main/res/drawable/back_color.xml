@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:state_pressed="false">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android" >
+            <solid android:color="#FFF" />
+        </shape>
+    </item>
+
+    <item android:state_pressed="true">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android" >
+            <solid android:color="#FaFaFa" />
+        </shape>
+    </item>
+
+</selector>
+    <!-- Android:startcolor和android:endcolor分别为起始和结束颜色 -->
+    <!-- android:angle是渐变角度。angle＝“0”,angle＝“360”时，是从左到右 ;angle＝“90”是从上到下;android:angle＝“180”是从右到左 -->
+    <!-- stroke：描边 -->
+    <!-- android:color 描边的颜色 -->
+    <!--
+    corners：圆角
+    android:radius为角的弧度，值越大角越圆。
+    -->
