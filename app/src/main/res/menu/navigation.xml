@@ -4,21 +4,25 @@
     <item
         android:id="@+id/navigation_mycourse"
         android:icon="@drawable/ic_perm_identity_black_24dp"
+        android:enabled="true"
         android:title="@string/title_mycourse" />
 
     <item
         android:id="@+id/navigation_profession"
         android:icon="@drawable/ic_import_contacts_black_24dp"
+        android:enabled="true"
         android:title="@string/title_profession" />
 
     <item
         android:id="@+id/navigation_common"
         android:icon="@drawable/ic_donut_small_black_24dp"
+        android:enabled="true"
         android:title="@string/title_common" />
 
     <item
         android:id="@+id/navigation_required"
         android:icon="@drawable/ic_filter_1_black_24dp"
+        android:enabled="true"
         android:title="@string/title_required" />
 
 </menu>
