@@ -7,8 +7,7 @@ android:padding="10dp">
     android:id="@+id/head_image"
     android:layout_width="150dp"
     android:layout_height="150dp"
-    android:src="@drawable/headimage"
-
+    android:src="@drawable/header"
     android:layout_centerInParent="true"/>
 
 </RelativeLayout>
