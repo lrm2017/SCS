@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back_logo"
+        >
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#078">
+            <Button
+                android:id="@+id/title_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="#098"
+                android:text="取消"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                />
+
+            <TextView
+                android:id="@+id/title_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" android:layout_weight="1"
+                android:text="键入标题"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textColor="#fff"
+                />
+            <Button
+                android:id="@+id/title_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="#098"
+                android:text="完成"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#e0ffffff"
+            >
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="10dp"
+                android:text="请输入你的名字:"
+                android:textSize="20dp"
+                />
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/biankuang"
+                android:padding="5dp"
+                android:textSize="18dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#008b8b"
+                android:text="例：吴霞"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#e0ffffff"
+            >
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="10dp"
+                android:text="请输入你的年龄:"
+                android:textSize="20dp"
+                />
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/biankuang"
+                android:padding="5dp"
+                android:textSize="18dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="#008b8b"
+                android:text="例：19"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#e0ffffff"
+            >
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="10dp"
+                android:text="请输入你的学号:"
+                android:textSize="20dp"
+                />
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/biankuang"
+                android:padding="5dp"
+                android:textSize="18dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#008b8b"
+                android:inputType="number"
+                android:text="例：41602240"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#e0ffffff"
+            >
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="10dp"
+                android:text="请输入你的班级:"
+                android:textSize="20dp"
+                />
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/biankuang"
+                android:padding="5dp"
+                android:textSize="18dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#008b8b"
+                android:text="例：智能1602"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#e0ffffff"
+            >
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="10dp"
+                android:text="请输入你的学院:"
+                android:textSize="20dp"
+                />
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/biankuang"
+                android:padding="5dp"
+                android:textSize="18dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#008b8b"
+                android:text="例：自动化学院"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#e0ffffff"
+                >
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="请输入你的座右铭:"
+                    android:textSize="20dp"
+                    />
+
+                <EditText
+                    android:id="@+id/infor_text"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/biankuang"
+                    android:padding="5dp"
+                    android:textSize="18dp"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:textColor="#008b8b"
+                    android:text="例：I Love Eating！"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
