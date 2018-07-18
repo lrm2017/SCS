@@ -4,6 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header"
+        />
+
     <TextView
         android:id="@+id/settings"
         android:textSize="30dp"
@@ -16,32 +22,22 @@
         android:layout_alignLeft="@+id/be_new_member"
         android:layout_alignStart="@+id/be_new_member" />
 
+
+
+
     <EditText
         android:id="@+id/set_user_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
-        android:hint="姓名"
-        android:layout_marginTop="128dp"
+        android:hint="用户名"
+        android:layout_marginTop="110dp"
         android:layout_below="@+id/settings"
         />
 
     <EditText
-        android:hint="学号"
-        android:layout_below="@+id/set_user_name"
-        android:id="@+id/input_identify"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <EditText
         android:hint="密码"
-        android:layout_below="@+id/input_identify"
         android:id="@+id/input_password"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
@@ -55,15 +51,14 @@
         android:id="@+id/be_new_member"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_alignEnd="@+id/input_password"
-        android:layout_alignLeft="@+id/input_password"
-        android:layout_alignRight="@+id/input_password"
-        android:layout_alignStart="@+id/input_password"
-        android:layout_below="@+id/input_password"
-        android:background="@drawable/button_style"
-        android:text="注册"
+        android:textSize="20dp"
         android:textColor="#388e3c"
-        android:textSize="20dp" />
+        android:text="注册"
+        android:background="@drawable/button_style"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="115dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/input_password"
+        android:layout_alignEnd="@+id/input_password" />
 
 </RelativeLayout>
