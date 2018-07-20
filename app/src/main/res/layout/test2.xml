@@ -2,13 +2,10 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
+    <ExpandableListView
+        android:id="@+id/mElistView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Test2"/>
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:background="#876156"/>
+    </ExpandableListView>
 </android.support.constraint.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.scs;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -21,8 +22,8 @@ public class MainActivity extends AppCompatActivity
     private BottomNavigationView bottomNavigationView;
     private ViewPager viewPager;
     private ViewerAdapter viewerAdapter;
-    MenuItem prevMeuItem;
-
+    private MenuItem prevMeuItem;
+    public SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
