@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 //输入手机号界面
 public class NewCounter extends AppCompatActivity implements View.OnClickListener {
@@ -47,10 +48,11 @@ public class NewCounter extends AppCompatActivity implements View.OnClickListene
                 userEditor.putString("id",userId.getText().toString());
                 userEditor.putString("password",userPassword.getText().toString());
                 userEditor.commit();
-                SP = getSharedPreferences(user.getString("user",""),MODE_PRIVATE);
+                SP = getSharedPreferences(userId.getText().toString(),MODE_PRIVATE);
                 editor = SP.edit();
                 editor.putString("name",userName.getText().toString());
                 editor.putString("identify",userId.getText().toString());
+//                Toast.makeText(NewCounter.this,userId.getText().toString(),Toast.LENGTH_SHORT).show();
                 editor.putString("password",userPassword.getText().toString());
                 editor.commit();
                 SuccessLogupActivity.actionStart(NewCounter.this,"param1","param2");

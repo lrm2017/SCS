@@ -49,30 +49,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         logUp.setOnClickListener(this);
         Button Login = (Button) findViewById(R.id.login) ;
         Login.setOnClickListener(this);
-
         user = getSharedPreferences("user",MODE_PRIVATE);
-        SP = getSharedPreferences(user.getString("id",""),MODE_PRIVATE);
-        editor = SP.edit();
+
         identify = (EditText) findViewById(R.id.account);
         password = (EditText) findViewById(R.id.password);
         identify.setText(user.getString("id",""));
-        checkBox = (CheckBox) findViewById(R.id.remember_pass);
-        if (SP.getBoolean("is_checked",false) ){
-            password.setText(user.getString("password",""));
-            checkBox.setChecked(true);
-        }
-        else
-            checkBox.setChecked(false);
-        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b){
-                    editor.putBoolean("is_checked",true);
-                }
-                else
-                    editor.putBoolean("is_checked",false);
-            }
-        });
+
     }
 
     private void showPopupWindow() {
@@ -124,10 +106,35 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 mPopWindow.dismiss();
             break;
             case R.id.login:
+                SP = getSharedPreferences(identify.getText().toString(),MODE_PRIVATE);
+                editor = SP.edit();
+                checkBox = (CheckBox) findViewById(R.id.remember_pass);
+                if (SP.getBoolean("is_checked",false) ){
+                    password.setText(user.getString("password",""));
+                    checkBox.setChecked(true);
+                }
+                else
+                    checkBox.setChecked(false);
+                checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                        if (b){
+                            editor.putBoolean("is_checked",true);
+                        }
+                        else
+                            editor.putBoolean("is_checked",false);
+                    }
+                });
                 editor.commit();
+                if ( password.getText().toString().
+                        equals(SP.getString("password","") ) ){
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
+                }
+                else
+                    Toast.makeText(LoginActivity.this,"密码错误！ 请重新输入",Toast.LENGTH_LONG).show();
+
                 break;
         }
     }
