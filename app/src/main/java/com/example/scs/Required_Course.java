@@ -1,5 +1,7 @@
 package com.example.scs;
 
+
+
 import org.litepal.crud.LitePalSupport;
 
 import java.util.ArrayList;
@@ -9,7 +11,7 @@ import java.util.List;
  * Created by 夏目斑熊 on 2018/7/20.
  */
 
-public class Commen_Course extends LitePalSupport{
+public class Required_Course extends LitePalSupport{
     private int id;//课程号
     private String courseId;
     private String course_name;//课程名字

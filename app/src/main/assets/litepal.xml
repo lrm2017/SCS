@@ -3,7 +3,7 @@
     <dbname value="demo" >
     </dbname>
 
-    <version value="6" >
+    <version value="7" >
     </version>
 
     <list>
@@ -12,7 +12,6 @@
         <mapping class="com.example.scs.Course"></mapping>
         <mapping class="com.example.scs.pro_course"></mapping>
         <mapping class="com.example.scs.Commen_Course"></mapping>
-
-
+        <mapping class="com.example.scs.Required_Course"></mapping>
     </list>
 </litepal>

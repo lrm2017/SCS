@@ -7,8 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ExpandableListView;
-import android.widget.Toast;
+import android.widget.ListView;
+
+import org.litepal.LitePal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,17 +21,26 @@ import java.util.List;
 public class RequiredCourses extends Fragment{
     private View view;
     Button button;
+    private List<Required_Course> required_courseList=new ArrayList<>();
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (view == null)
-            view = inflater.inflate(R.layout.test1,container,false);
+            view = inflater.inflate(R.layout.test4,container,false);
         ViewGroup parent = (ViewGroup) view.getParent();
         if (parent != null)
             parent.removeView(view);
+
+        required_courseList=LitePal.findAll(Required_Course.class);
+        RequiredAdapter adapter=new RequiredAdapter(getActivity(),R.layout.test4_look,required_courseList);
+        ListView listView =(ListView) view.findViewById(R.id.test4_listView);
+        listView.setAdapter(adapter);
+
         return view;
     }
+
+
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {

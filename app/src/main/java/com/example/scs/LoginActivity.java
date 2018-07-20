@@ -87,7 +87,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 mPopWindow.dismiss();
             break;
             case R.id.login:
-                Intent intent = new Intent(LoginActivity.this, BottomActivity.class);
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
                 break;
         }

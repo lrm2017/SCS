@@ -13,11 +13,11 @@ public class NewCounter extends AppCompatActivity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_counter);
-        Button back = (Button) findViewById(R.id.back);
-        back.setOnClickListener(this);
-        Button nextStep = (Button)findViewById(R.id.next_step);
-        nextStep.setOnClickListener(this);
+        setContentView(R.layout.activity_complete_information);
+//        Button back = (Button) findViewById(R.id.back);
+//        back.setOnClickListener(this);
+//        Button nextStep = (Button)findViewById(R.id.next_step);
+//        nextStep.setOnClickListener(this);
     }
 
     public static void NewCounterStart(Context context, String data1, String data2) {
@@ -30,12 +30,12 @@ public class NewCounter extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.back:
-                break;
-            case R.id.next_step:
-                //启动短信认证的界面
-                //AuthenticationCode.actionStart(NewCounter.this,"data1", "data2");
-                break;
+//            case R.id.back:
+//                break;
+//            case R.id.next_step:
+//                //启动短信认证的界面
+//                //AuthenticationCode.actionStart(NewCounter.this,"data1", "data2");
+//                break;
         }
     }
 }

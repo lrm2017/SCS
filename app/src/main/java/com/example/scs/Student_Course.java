@@ -1,6 +1,5 @@
 package com.example.scs;
 
-import org.litepal.crud.DataSupport;
 import org.litepal.crud.LitePalSupport;
 
 /**

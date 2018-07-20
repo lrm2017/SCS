@@ -12,9 +12,6 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import org.litepal.LitePal;
-import org.litepal.crud.DataSupport;
-
-import java.util.List;
 
 /**
  * Created by 123 on 2018/7/16.
@@ -50,7 +47,7 @@ public class MyCourses extends Fragment {
                 pro_course.setCourse_name("自动控制基础");
                 pro_course.setCourse_coad("4");
                 pro_course.setTeacher("刘冀伟");
-                pro_course.setImageId(R.drawable.p_549101);
+                pro_course.setImageId(R.drawable.p1171558);
                 pro_course.save();
 
                 Commen_Course commen_course=new Commen_Course();
@@ -61,6 +58,16 @@ public class MyCourses extends Fragment {
                 commen_course.setImageId(R.drawable.p1188482);
                 commen_course.setTime("星期三");
                 commen_course.save();
+
+                Required_Course required_course=new Required_Course();
+                required_course.setCourse_coad("3");
+                required_course.setCourse_name("美语语调");
+                required_course.setCourseId("0123");
+                required_course.setTeacher("尚元元");
+                required_course.setImageId(R.drawable.p1188482);
+                required_course.setTime("星期三");
+                required_course.save();
+                //pro_course_adapter.
 
 
                /* pro_course mayuan=new pro_course();

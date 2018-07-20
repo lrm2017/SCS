@@ -6,10 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ListView;
-
-import com.example.scs.database.pro_course;
 
 import org.litepal.LitePal;
 
@@ -35,8 +32,7 @@ public class ProfessionCourses extends Fragment {
 
         //initpro_course();
         pro_courseList= LitePal.findAll(pro_course.class);
-        pro_course_adapter adapter=new pro_course_adapter(getActivity(),
-                R.layout.pro_course_item, pro_courseList);
+        pro_course_adapter adapter=new pro_course_adapter(getActivity(),R.layout.pro_course_item,pro_courseList);
         ListView listView = (ListView) view.findViewById(R.id.list_view);
         listView.setAdapter(adapter);
         return view;

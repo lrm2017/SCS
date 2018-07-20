@@ -1,4 +1,4 @@
-package com.example.scs.fragment;
+package com.example.scs;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
