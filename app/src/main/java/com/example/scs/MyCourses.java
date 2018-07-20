@@ -11,6 +11,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import org.litepal.LitePal;
+import org.litepal.crud.DataSupport;
+
+import java.util.List;
+
 /**
  * Created by 123 on 2018/7/16.
  */
@@ -34,6 +39,25 @@ public class MyCourses extends Fragment {
                 Toast.makeText(getActivity(),"成功了",Toast.LENGTH_SHORT).show();
             }
         });
+
+        //用来查看数据库，完美
+        Button queryButton =(Button) view.findViewById(R.id.query_data);
+        queryButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                List<Commen_Course> procourses= DataSupport.findAll(Commen_Course.class);
+                for(Commen_Course commen_course:procourses){
+                    Log.d("CommonCourses","course name is"+commen_course.getCourse_name());
+                    Log.d("CommonCourses","course teacher is"+commen_course.getTeacher());
+                    Log.d("CommonCourses","course time is"+commen_course.getTime());
+                    Log.d("CommonCourses","course coad is"+commen_course.getCourse_coad());
+                    Log.d("CommonCourses","course id is"+commen_course.getId());
+                }
+               LitePal.deleteAll(Commen_Course.class);
+                LitePal.deleteAll(pro_course.class);
+            }
+        });
+
         return view;
     }
 
