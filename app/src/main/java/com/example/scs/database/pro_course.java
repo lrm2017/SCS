@@ -1,4 +1,4 @@
-package com.example.scs;
+package com.example.scs.database;
 
 import org.litepal.crud.DataSupport;
 

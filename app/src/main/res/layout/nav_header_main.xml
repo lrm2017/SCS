@@ -7,9 +7,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_weight="7"
-    >
-
+        android:layout_weight="7" >
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -24,25 +22,25 @@
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:paddingTop="@dimen/activity_vertical_margin"
             android:theme="@style/ThemeOverlay.AppCompat.Dark">
-             <ImageView
+        <ImageView
             android:id="@+id/imageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
             app:srcCompat="@drawable/back_logo" />
 
-             <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="Code"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:text="Code"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-         <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="android.studio@android.com" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="android.studio@android.com" />
     </LinearLayout>
 
 
@@ -231,12 +229,15 @@
         android:id="@+id/change_information"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:text="点击编辑个人信息"
+        android:text="编辑资料"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_gravity="bottom"
         android:layout_below="@+id/information5_layout"
-        android:textColor="#ffffff"
+        android:textColor="#fff"
         android:gravity="center"
-        android:background="#96CDCD"
+        android:background="@drawable/setcolor"
         />
 
     </RelativeLayout>

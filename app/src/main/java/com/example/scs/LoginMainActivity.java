@@ -1,12 +1,21 @@
 package com.example.scs;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.PopupWindow;
+import android.widget.Toast;
 
 //打开软件的主界面
 public class LoginMainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -30,22 +39,18 @@ public class LoginMainActivity extends AppCompatActivity implements View.OnClick
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.login:
-                LoginActivity.LoginStart(LoginMainActivity.this,"data1", "data2");
+                Intent intent = new Intent(LoginMainActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
                 break;
             case R.id.new_counter:
                 NewCounter.NewCounterStart(LoginMainActivity.this, "data1", "data2");
-
+                finish();
                 break;
             default:
                 break;
         }
     }
 
-    public static void actionStart(Context context, String data1, String data2) {
-        Intent intent = new Intent(context, LoginActivity.class);
-        intent.putExtra("param1", data1);
-        intent.putExtra("param2", data2);
-        context.startActivity(intent);
-    }
 
 }

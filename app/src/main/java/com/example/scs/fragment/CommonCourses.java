@@ -1,4 +1,4 @@
-package com.example.scs;
+package com.example.scs.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +10,8 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.example.scs.Adapter.CommenAdapter;
+import com.example.scs.R;
 import com.example.scs.database.Student_Course;
 import com.example.scs.database.Commen_Course;
 

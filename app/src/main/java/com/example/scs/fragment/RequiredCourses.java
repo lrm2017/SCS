@@ -1,4 +1,4 @@
-package com.example.scs;
+package com.example.scs.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
+
+import com.example.scs.R;
 
 import java.util.ArrayList;
 import java.util.List;

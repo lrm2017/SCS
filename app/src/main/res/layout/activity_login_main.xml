@@ -23,7 +23,7 @@
         android:textColor="#388e3c"
         android:background="@drawable/button_style"
         android:textSize="20dp"
-        android:text="新用户"
+        android:text="注册"
         android:layout_marginLeft="30dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="39dp"

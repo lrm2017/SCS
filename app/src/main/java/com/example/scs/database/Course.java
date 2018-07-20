@@ -1,4 +1,6 @@
-package com.example.scs;
+package com.example.scs.database;
+
+import com.example.scs.database.Student;
 
 import org.litepal.crud.DataSupport;
 

@@ -1,9 +1,9 @@
-package com.example.mark.together;
+package com.example.scs;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -18,6 +18,13 @@ public class SuccessLogupActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //登录
+                switch (view.getId()) {
+                    case R.id.login:
+                        Intent intent = new Intent(SuccessLogupActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
+                    break;
+                }
             }
         });
     }

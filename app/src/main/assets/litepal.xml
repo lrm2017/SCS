@@ -7,11 +7,11 @@
     </version>
 
     <list>
-        <mapping class="com.example.scs.Student"></mapping>
-        <mapping class="com.example.scs.Student_Course"></mapping>
-        <mapping class="com.example.scs.Course"></mapping>
-        <mapping class="com.example.scs.pro_course"></mapping>
-        <mapping class="com.example.scs.Commen_Course"></mapping>
+        <mapping class="com.example.scs.database.Student"></mapping>
+        <mapping class="com.example.scs.database.Student_Course"></mapping>
+        <mapping class="com.example.scs.database.Course"></mapping>
+        <mapping class="com.example.scs.database.pro_course"></mapping>
+        <mapping class="com.example.scs.database.Commen_Course"></mapping>
 
 
     </list>

@@ -1,4 +1,4 @@
-package com.example.scs;
+package com.example.scs.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.scs.R;
+import com.example.scs.database.Commen_Course;
+import com.example.scs.database.pro_course;
 
 import org.litepal.LitePal;
 import org.litepal.crud.DataSupport;

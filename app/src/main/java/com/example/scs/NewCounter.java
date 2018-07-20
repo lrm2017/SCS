@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 //输入手机号界面
 public class NewCounter extends AppCompatActivity implements View.OnClickListener {
@@ -13,11 +14,12 @@ public class NewCounter extends AppCompatActivity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_counter);
-        Button back = (Button) findViewById(R.id.back);
-        back.setOnClickListener(this);
-        Button nextStep = (Button)findViewById(R.id.next_step);
-        nextStep.setOnClickListener(this);
+        setContentView(R.layout.activity_complete_information);
+        Button button = (Button) findViewById(R.id.be_new_member);
+        button.setOnClickListener(this);
+        EditText userName = findViewById(R.id.set_user_name);
+        EditText userId = findViewById(R.id.input_identify);
+        EditText userPassword = findViewById(R.id.input_password);
     }
 
     public static void NewCounterStart(Context context, String data1, String data2) {
@@ -30,11 +32,9 @@ public class NewCounter extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.back:
-                break;
-            case R.id.next_step:
-                //启动短信认证的界面
-                //AuthenticationCode.actionStart(NewCounter.this,"data1", "data2");
+            case R.id.be_new_member:
+                SuccessLogupActivity.actionStart(NewCounter.this,"param1","param2");
+                finish();
                 break;
         }
     }

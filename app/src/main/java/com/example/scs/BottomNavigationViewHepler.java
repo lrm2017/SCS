@@ -1,10 +1,18 @@
 package com.example.scs;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
 import java.lang.reflect.Field;
 
 
@@ -35,5 +43,6 @@ public class BottomNavigationViewHepler {
             Log.e("BNVHelper", "Unable to change value of shift mode", e);
         }
     }
+
 }
 

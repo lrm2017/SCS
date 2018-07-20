@@ -74,6 +74,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (id){
             case R.id.log_up:
                 NewCounter.NewCounterStart(LoginActivity.this, "data1", "data2");
+                finish();
                 break;
             case R.id.login_forget_password:
                 showPopupWindow();//弹出
@@ -87,8 +88,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 mPopWindow.dismiss();
             break;
             case R.id.login:
-                Intent intent = new Intent(LoginActivity.this, BottomActivity.class);
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
+                finish();
                 break;
         }
     }
