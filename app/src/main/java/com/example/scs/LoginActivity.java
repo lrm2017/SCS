@@ -3,6 +3,7 @@ package com.example.scs;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -14,6 +15,9 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.PopupWindow;
 import android.widget.Toast;
 
@@ -24,6 +28,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Context context;
     private View mView;
     private Window mWindow;
+    private SharedPreferences user;
+    private  SharedPreferences SP;
+    private SharedPreferences.Editor editor;
+    private SharedPreferences.Editor userEditor;
+    private EditText identify;
+    private EditText password;
+    private CheckBox checkBox;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,12 +42,32 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
         LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
         mView = inflater.inflate(R.layout.pop_up,null);
+
         Button forgetPassword = (Button) findViewById(R.id.login_forget_password);
         forgetPassword.setOnClickListener(this);
         Button logUp = (Button) findViewById(R.id.log_up);
         logUp.setOnClickListener(this);
         Button Login = (Button) findViewById(R.id.login) ;
         Login.setOnClickListener(this);
+
+        user = getSharedPreferences("user",MODE_PRIVATE);
+        SP = getSharedPreferences(user.getString("id",""),MODE_PRIVATE);
+        editor = SP.edit();
+        identify = (EditText) findViewById(R.id.account);
+        password = (EditText) findViewById(R.id.password);
+        identify.setText(SP.getString("identify",""));
+        if (SP.getBoolean("is_checked",false) )
+            password.setText(SP.getString("password",""));
+        checkBox = (CheckBox) findViewById(R.id.remember_pass);
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b)
+                    editor.putBoolean("is_checked",true);
+                else
+                    editor.putBoolean("is_checked",false);
+            }
+        });
     }
 
     private void showPopupWindow() {
@@ -88,6 +119,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 mPopWindow.dismiss();
             break;
             case R.id.login:
+                editor.commit();
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();

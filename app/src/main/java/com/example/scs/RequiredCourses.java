@@ -1,4 +1,4 @@
-package com.example.scs.fragment;
+package com.example.scs;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,6 +12,8 @@ import android.widget.ListView;
 import org.litepal.LitePal;
 
 import com.example.scs.R;
+import com.example.scs.RequiredAdapter;
+import com.example.scs.database.Required_Course;
 
 import java.util.ArrayList;
 import java.util.List;

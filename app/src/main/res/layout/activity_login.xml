@@ -44,6 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="密码"
+            android:inputType="textPassword"
             android:layout_gravity="center_vertical"
             />
     </LinearLayout>
@@ -75,8 +76,8 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:textSize="20dp"
-        android:textColor="#388e3c"
-        android:background="@drawable/button_style"
+        android:textColor="#fff"
+        android:background="@drawable/setcolor"
         android:text="登录"/>
 
     <RelativeLayout

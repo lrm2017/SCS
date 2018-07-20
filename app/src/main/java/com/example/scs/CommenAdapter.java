@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.scs.database.Commen_Course;
+import com.example.scs.database.Student_Course;
+
 import java.util.List;
 
 /**
@@ -60,7 +63,6 @@ public class CommenAdapter extends ArrayAdapter<Commen_Course> {
                 Student_Course.save();
             }
         });
-
         return view;
     }
 }

@@ -11,6 +11,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.scs.database.Commen_Course;
+import com.example.scs.database.Required_Course;
+import com.example.scs.database.pro_course;
+
 import org.litepal.LitePal;
 
 /**

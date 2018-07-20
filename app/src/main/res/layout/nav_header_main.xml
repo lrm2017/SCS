@@ -33,14 +33,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
-            android:text="Code"
+            android:text="北京科技大学"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="android.studio@android.com" />
+            android:text="1363111230@qq.com" />
     </LinearLayout>
 
 
@@ -67,11 +67,14 @@
             android:textColor="#000000"
             />
 
-        <TextView
+        <EditText
+            android:id="@+id/name"
             android:layout_width="150dp"
             android:layout_height="48dp"
             android:paddingRight="@dimen/nav_header_vertical_spacing"
             android:layout_gravity="center"
+            android:background="@null"
+            android:editable="false"
             />
 
     </LinearLayout>
@@ -98,11 +101,14 @@
             android:textColor="#000000"
             />
 
-        <TextView
+        <EditText
+            android:id="@+id/identify"
             android:layout_width="150dp"
             android:layout_height="48dp"
             android:paddingRight="@dimen/nav_header_vertical_spacing"
             android:layout_gravity="center"
+            android:background="@null"
+            android:editable="false"
             />
     </LinearLayout>
 
@@ -127,11 +133,14 @@
             android:text="学院  "
             android:textColor="#000000"
             />
-        <TextView
+        <EditText
+            android:id="@+id/college"
             android:layout_width="150dp"
             android:layout_height="48dp"
             android:paddingRight="@dimen/nav_header_vertical_spacing"
             android:layout_gravity="center"
+            android:background="@null"
+            android:editable="false"
             />
     </LinearLayout>
 
@@ -157,11 +166,14 @@
             android:textColor="#000000"
             />
 
-        <TextView
+        <EditText
+            android:id="@+id/className"
             android:layout_width="150dp"
             android:layout_height="48dp"
             android:paddingRight="@dimen/nav_header_vertical_spacing"
             android:layout_gravity="center"
+            android:background="@null"
+            android:editable="false"
             />
     </LinearLayout>
 
@@ -187,11 +199,14 @@
             android:textColor="#000000"
             />
 
-        <TextView
+        <EditText
+            android:id="@+id/age"
             android:layout_width="150dp"
             android:layout_height="48dp"
             android:paddingRight="@dimen/nav_header_vertical_spacing"
+            android:background="@null"
             android:layout_gravity="center"
+            android:editable="false"
             />
     </LinearLayout>
 
@@ -214,14 +229,18 @@
             android:gravity="center"
             android:textSize="15sp"
             android:text="座右铭  "
+            android:background="@null"
             android:textColor="#000000"
             />
 
-        <TextView
+        <EditText
+            android:id="@+id/motto"
             android:layout_width="150dp"
             android:layout_height="120dp"
             android:paddingRight="@dimen/nav_header_vertical_spacing"
+            android:background="@null"
             android:layout_gravity="center"
+            android:editable="false"
             />
     </LinearLayout>
 

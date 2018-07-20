@@ -61,9 +61,9 @@
         android:layout_alignRight="@+id/input_password"
         android:layout_alignStart="@+id/input_password"
         android:layout_below="@+id/input_password"
-        android:background="@drawable/button_style"
+        android:background="@drawable/setcolor"
         android:text="注册"
-        android:textColor="#388e3c"
+        android:textColor="#fff"
         android:textSize="20dp" />
 
 </RelativeLayout>

@@ -18,12 +18,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
-import com.example.scs.fragment.CommonCourses;
-import com.example.scs.fragment.MyCourses;
-import com.example.scs.fragment.ProfessionCourses;
-import com.example.scs.fragment.RequiredCourses;
+
 import com.example.scs.Adapter.ViewerAdapter;
+import com.example.scs.fragment.ProfessionCourses;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener {
@@ -31,9 +30,18 @@ public class MainActivity extends AppCompatActivity
     private ViewPager viewPager;
     private ViewerAdapter viewerAdapter;
     private MenuItem prevMeuItem;
-    public SharedPreferences sharedPreferences;
+    public SharedPreferences sp;
+    private SharedPreferences.Editor editor;
+    private SharedPreferences user;
+    private SharedPreferences.Editor userEditor;
     public int count = 0;
     private View view;
+    private EditText name;
+    private EditText age;
+    private EditText identify;
+    private EditText college;
+    private EditText className;
+    private EditText motto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,10 +68,30 @@ public class MainActivity extends AppCompatActivity
         view = navigationView.getHeaderView(0);
         Button edit = (Button) view.findViewById(R.id.change_information);
         edit.setOnClickListener(this);
-
+        initInformation();
         initBottomNavigationView();
         initViewPager();
     }
+
+    private void initInformation() {
+        user = getSharedPreferences("user",MODE_PRIVATE);
+        sp = getSharedPreferences(user.getString("id",""),MODE_PRIVATE);
+
+        name = (EditText) view.findViewById(R.id.name);
+        age = (EditText) view.findViewById(R.id.age);
+        identify = (EditText) view.findViewById(R.id.identify);
+        college = (EditText) view.findViewById(R.id.college);
+        className = (EditText) view.findViewById(R.id.className);
+        motto = (EditText) view.findViewById(R.id.motto);
+
+        name.setText(sp.getString("name",""));
+        age.setText(sp.getString("age",""));
+        identify.setText(sp.getString("identify",""));
+        college.setText(sp.getString("college",""));
+        className.setText(sp.getString("class",""));
+        motto.setText(sp.getString("motto",""));
+    }
+
 
     private void initViewPager() {
         viewPager = (ViewPager) findViewById(R.id.viewpager);
@@ -185,7 +213,7 @@ public class MainActivity extends AppCompatActivity
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.change_information:
-                Toast.makeText(MainActivity.this,"success",Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this,"success",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this,IdentityEditor.class);
                 startActivity(intent);
                 break;

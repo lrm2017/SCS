@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.scs.database.Required_Course;
+import com.example.scs.database.Student_Course;
+
 import java.util.List;
 
 /**

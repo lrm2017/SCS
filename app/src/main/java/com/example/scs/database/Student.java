@@ -3,6 +3,7 @@ package com.example.scs.database;
 
 
 import org.litepal.crud.DataSupport;
+import org.litepal.crud.LitePalSupport;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +12,7 @@ import java.util.List;
  * Created by 夏目斑熊 on 2018/7/16.
  */
 
-public class Student extends DataSupport
+public class Student extends LitePalSupport
 {
     //每一个字段对应的表中的每一列，
     //Student类就对应着数据库中的student表
