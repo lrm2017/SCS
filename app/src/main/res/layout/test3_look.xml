@@ -47,6 +47,6 @@
             android:text="十"
             android:textSize="30dp"
             android:textColor="#fff"
-            android:background="@drawable/p1131793"    />
+            android:background="@drawable/p1131793"/>
 
     </LinearLayout>

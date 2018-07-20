@@ -45,21 +45,60 @@ public class MyCourses extends Fragment {
         queryButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                List<Commen_Course> procourses= DataSupport.findAll(Commen_Course.class);
-                for(Commen_Course commen_course:procourses){
-                    Log.d("CommonCourses","course name is"+commen_course.getCourse_name());
-                    Log.d("CommonCourses","course teacher is"+commen_course.getTeacher());
-                    Log.d("CommonCourses","course time is"+commen_course.getTime());
-                    Log.d("CommonCourses","course coad is"+commen_course.getCourse_coad());
-                    Log.d("CommonCourses","course id is"+commen_course.getId());
-                }
-               LitePal.deleteAll(Commen_Course.class);
+                pro_course pro_course=new pro_course();
+                pro_course.setCourseId("001");
+                pro_course.setCourse_name("自动控制基础");
+                pro_course.setCourse_coad("4");
+                pro_course.setTeacher("刘冀伟");
+                pro_course.setImageId(R.drawable.p_549101);
+                pro_course.save();
+
+                Commen_Course commen_course=new Commen_Course();
+                commen_course.setCourse_coad("3");
+                commen_course.setCourse_name("美语语调");
+                commen_course.setCourseId("0123");
+                commen_course.setTeacher("尚元元");
+                commen_course.setImageId(R.drawable.p1188482);
+                commen_course.setTime("星期三");
+                commen_course.save();
+
+
+               /* pro_course mayuan=new pro_course();
+                mayuan.setCourseId("0111");
+                mayuan.setCourse_name("马克思主义原理");
+                mayuan.setCourse_coad("3");
+                mayuan.setTeacher("刘冀伟");
+                mayuan.setImageId(R.drawable.p1115685);
+                mayuan.save();
+
+                pro_course gaosu=new pro_course();
+                gaosu.setCourseId("0126");
+                gaosu.setCourse_name("高等数学");
+                gaosu.setCourse_coad("6");
+                gaosu.setTeacher("王辉");
+                gaosu.setImageId(R.drawable.p1171558);
+                gaosu.save();*/
+            }
+        });
+
+        Button queryButton2 =(Button) view.findViewById(R.id.query2_data);
+        queryButton2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                LitePal.deleteAll(Commen_Course.class);
                 LitePal.deleteAll(pro_course.class);
             }
         });
 
         return view;
     }
+
+
+    /*private void initComment_Cources(){
+        Commen_Course kouyu=new Commen_Course("0123","美语语调","2","尚元元",R.drawable.p1188482,"星期三");
+        Commen_Course tanbie=new Commen_Course("0124","探寻巴别塔","2","未知",R.drawable.p1213134,"星期一");
+        Commen_Course hanzi=new Commen_Course("0126","汉字书法书写","2","韩梅",R.drawable.p1207009,"星期四");
+    }*/
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {

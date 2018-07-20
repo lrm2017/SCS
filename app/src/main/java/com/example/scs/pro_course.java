@@ -1,6 +1,7 @@
 package com.example.scs;
 
 import org.litepal.crud.DataSupport;
+import org.litepal.crud.LitePalSupport;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,11 +10,12 @@ import java.util.List;
  * Created by 夏目斑熊 on 2018/7/19.
  */
 
-public class pro_course extends DataSupport {
+public class pro_course extends LitePalSupport {
     private int id;//课程号
+    private String courseId;
     private String course_name;//课程名字
     private String teacher;//老师名字
-    private int course_coad;//课程学分
+    private String course_coad;//课程学分
     private String time;//任课时间
     private List<Student> courseList=new ArrayList<Student>();//一个课对应多个学生
     private int imageId;
@@ -22,6 +24,14 @@ public class pro_course extends DataSupport {
         this.course_name=course_name;
         this.imageId=imageId;
     }*/
+
+    public String getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
+    }
 
     public int getImageId() {
         return imageId;
@@ -56,11 +66,11 @@ public class pro_course extends DataSupport {
     }
 
 
-    public int getCourse_coad() {
+    public String getCourse_coad() {
         return course_coad;
     }
 
-    public void setCourse_coad(int course_coad) {
+    public void setCourse_coad(String course_coad) {
         this.course_coad = course_coad;
     }
 

@@ -1,27 +1,46 @@
 package com.example.scs;
 
 import org.litepal.crud.DataSupport;
+import org.litepal.crud.LitePalSupport;
 
 /**
  * Created by 夏目斑熊 on 2018/7/18.
  */
 
-public class Student_Course extends DataSupport {
+public class Student_Course extends LitePalSupport {
     private int id;//课程序号
+    private String courseId;
     private String course_name;//课程名
     private String teacher;//老师名
     private String time;//任课时间
     private String course_grade;//课程分数
     private String course_coad;//课程学分
     private Student student;//一对一，一个学生课程对应一个学生
+    private int ImageId;
 
-    public Student_Course(String course_name,String teacher,String course_grade,String course_coad,String time){
+    public int getImageId() {
+        return ImageId;
+    }
+
+    public void setImageId(int imageId) {
+        ImageId = imageId;
+    }
+
+    public String getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
+    }
+
+   /* public Student_Course(String course_name, String teacher, String course_grade, String course_coad, String time){
         this.course_name=course_name;
         this.teacher=teacher;
         this.course_grade=course_grade;
         this.course_coad=course_coad;
         this.time=time;
-    }
+    }*/
 
     public int getId() {
         return id;

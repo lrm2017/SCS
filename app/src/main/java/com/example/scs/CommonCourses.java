@@ -10,6 +10,8 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
+import org.litepal.LitePal;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,12 +33,14 @@ public class CommonCourses extends Fragment {
         if (parent != null)
             parent.removeView(view);
 
-        initComment_Cources();
+        //initComment_Cources();
+       commen_coursesList= LitePal.findAll(Commen_Course.class);
         CommenAdapter adapter=new CommenAdapter(getActivity(),R.layout.test3_look,commen_coursesList);
         ListView listView =(ListView) view.findViewById(R.id.test3_listView);
         listView.setAdapter(adapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+        /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, final int position, long id) {
                 Button button=(Button) view.findViewById(R.id.test3_add_Button);
@@ -47,24 +51,14 @@ public class CommonCourses extends Fragment {
                         Student_Course student_course=new Student_Course(commen_course.getCourse_name(),commen_course.getTeacher(),
                                 "0",commen_course.getCourse_coad(),commen_course.getTime());
                         student_courseList.add(student_course);
+
                         ///////////////////////////这里有student显示列表没有写
                     }
                 });
             }
-        });
-
-
+        });*/
 
         return view;
-    }
-
-    private void initComment_Cources(){
-        Commen_Course kouyu=new Commen_Course("0123","美语语调","2","尚元元",R.drawable.p1188482,"星期三");
-        commen_coursesList.add(kouyu);
-        Commen_Course tanbie=new Commen_Course("0124","探寻巴别塔","2","未知",R.drawable.p1213134,"星期一");
-        commen_coursesList.add(tanbie);
-        Commen_Course hanzi=new Commen_Course("0126","汉字书法书写","2","韩梅",R.drawable.p1207009,"星期四");
-        commen_coursesList.add(hanzi);
     }
 
     @Override

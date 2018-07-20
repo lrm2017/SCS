@@ -27,14 +27,14 @@ public class Commen_Course extends LitePalSupport{
         this.courseId = courseId;
     }
 
-    public Commen_Course(String courseId, String course_name, String course_coad, String teacher, int imageId, String time){
+    /*public Commen_Course(String courseId, String course_name, String course_coad, String teacher, int imageId, String time){
         this.courseId=courseId;
         this.course_name=course_name;
         this.course_coad=course_coad;
         this.teacher=teacher;
         this.imageId=imageId;
         this.time=time;
-    }
+    }*/
 
     public int getImageId() {
         return imageId;

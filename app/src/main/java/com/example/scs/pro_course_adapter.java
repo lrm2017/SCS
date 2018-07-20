@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by 夏目斑熊 on 2018/7/19.
@@ -24,12 +25,22 @@ public class pro_course_adapter extends ArrayAdapter<pro_course> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
-        pro_course pro_course = getItem(position);
-        View view = LayoutInflater.from(getContext()).inflate(resourceId,parent,false);
-        ImageView pngImage=(ImageView) view.findViewById(R.id.png_image);
-        TextView proCourse=(TextView) view.findViewById(R.id.pro_course);
-        pngImage.setImageResource(pro_course.getImageId());
-        proCourse.setText(pro_course.getCourse_name());
+        pro_course pro_course=getItem(position);//获取当前实例对象
+        View view;
+        if (convertView==null){
+            view=LayoutInflater.from(getContext()).inflate(resourceId,parent,false);
+        }
+        else {
+            view=convertView;
+        }
+        ImageView imageView1=(ImageView)view.findViewById(R.id.test2_image);
+        TextView textView1=(TextView)view.findViewById(R.id.test2_text1);
+        TextView textView2=(TextView)view.findViewById(R.id.test2_text2);
+        TextView textView3=(TextView)view.findViewById(R.id.test2_text3);
+        textView1.setText(pro_course.getCourseId());
+        imageView1.setImageResource(pro_course.getImageId());
+        textView2.setText(pro_course.getCourse_name());
+        textView3.setText(pro_course.getCourse_coad());
         return view;
     }
 }
