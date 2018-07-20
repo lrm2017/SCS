@@ -1,29 +1,23 @@
 <RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#fff"
+    android:id="@+id/complete_information_background"
+    android:background="#FFF"
+    android:alpha="100"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/header"
-        />
 
     <TextView
         android:id="@+id/settings"
         android:textSize="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="设置用户名及密码"
+        android:text="                 学生信息"
+        android:textColor="#00CDCD"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="36dp"
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/be_new_member"
         android:layout_alignStart="@+id/be_new_member" />
-
-
-
 
     <EditText
         android:id="@+id/set_user_name"
@@ -31,13 +25,51 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
-        android:hint="用户名"
-        android:layout_marginTop="110dp"
+        android:hint="姓名"
+        android:layout_marginTop="90dp"
         android:layout_below="@+id/settings"
         />
 
     <EditText
+        android:hint="学号"
+        android:layout_below="@+id/set_user_name"
+        android:id="@+id/input_identify"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <EditText
+        android:id="@+id/xueyuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/input_identify"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="学院" />
+
+    <EditText
+        android:hint="班级"
+        android:layout_below="@+id/xueyuan"
+        android:id="@+id/banji"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
         android:hint="密码"
+        android:layout_below="@+id/banji"
         android:id="@+id/input_password"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
@@ -51,14 +83,15 @@
         android:id="@+id/be_new_member"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:textColor="#388e3c"
-        android:text="注册"
-        android:background="@drawable/button_style"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="115dp"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="40dp"
+        android:layout_alignEnd="@+id/input_password"
+        android:layout_alignLeft="@+id/input_password"
         android:layout_alignRight="@+id/input_password"
-        android:layout_alignEnd="@+id/input_password" />
+        android:layout_alignStart="@+id/input_password"
+        android:layout_below="@+id/input_password"
+        android:background="#551A8B"
+        android:text="注   册"
+        android:textColor="#FFF"
+        android:textSize="25dp" />
 
 </RelativeLayout>

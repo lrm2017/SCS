@@ -9,7 +9,7 @@ import java.util.List;
  * Created by 夏目斑熊 on 2018/7/18.
  */
 
-public class Course extends DataSupport {
+public class Course {
     private int id;//课程号
     private String course_name;//课程名字
     private String teacher;//老师名字

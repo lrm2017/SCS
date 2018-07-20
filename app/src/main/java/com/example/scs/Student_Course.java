@@ -6,7 +6,7 @@ import org.litepal.crud.DataSupport;
  * Created by 夏目斑熊 on 2018/7/18.
  */
 
-public class Student_Course extends DataSupport {
+public class Student_Course {
     private int id;//课程序号
     private String course_name;//课程名
     private String teacher;//老师名

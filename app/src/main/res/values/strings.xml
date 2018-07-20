@@ -9,6 +9,6 @@
     <string name="title_profession">专业必修</string>
     <string name="title_required">必修课</string>
     <string name="title_common">公共选修</string>
-
-
-    </resources>
+    <drawable name="clr_normal">#ff6501</drawable>
+    <drawable name="clr_pressed">#adff2f</drawable>
+</resources>
