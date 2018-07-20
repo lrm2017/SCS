@@ -10,6 +10,9 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.example.scs.database.Student_Course;
+import com.example.scs.database.Commen_Course;
+
 import java.util.ArrayList;
 import java.util.List;
 
