@@ -55,15 +55,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         editor = SP.edit();
         identify = (EditText) findViewById(R.id.account);
         password = (EditText) findViewById(R.id.password);
-        identify.setText(SP.getString("identify",""));
-        if (SP.getBoolean("is_checked",false) )
-            password.setText(SP.getString("password",""));
+        identify.setText(user.getString("id",""));
         checkBox = (CheckBox) findViewById(R.id.remember_pass);
+        if (SP.getBoolean("is_checked",false) ){
+            password.setText(user.getString("password",""));
+            checkBox.setChecked(true);
+        }
+        else
+            checkBox.setChecked(false);
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b)
+                if (b){
                     editor.putBoolean("is_checked",true);
+                }
                 else
                     editor.putBoolean("is_checked",false);
             }

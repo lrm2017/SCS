@@ -45,6 +45,7 @@ public class NewCounter extends AppCompatActivity implements View.OnClickListene
             case R.id.be_new_member:
                 userEditor = user.edit();
                 userEditor.putString("id",userId.getText().toString());
+                userEditor.putString("password",userPassword.getText().toString());
                 userEditor.commit();
                 SP = getSharedPreferences(user.getString("user",""),MODE_PRIVATE);
                 editor = SP.edit();
