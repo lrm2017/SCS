@@ -1,24 +1,40 @@
 package com.example.scs;
 
+import org.litepal.crud.DataSupport;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * Created by 123 on 2018/7/17.
+ * Created by 夏目斑熊 on 2018/7/16.
  */
 
-public class Student
+public class Student extends DataSupport
 {
     //每一个字段对应的表中的每一列，
     //Student类就对应着数据库中的student表
     private int id;
-    private String student_number="未填写学号";
     private String name="未填写名字";
     private String password;
     private int age=0;
     private String class_number="未填写班级";
     private String college_name="未填写学院";
     private String text="请说出你的座右铭";
+    private List<Student_Course> courseList=new ArrayList<Student_Course>();//一个学生对应多个学生课程
 
+    public List<Student_Course> getCourseList() {
+        return courseList;
+    }
 
-    ///////////id
+    public void setCourseList(List<Student_Course> courseList) {
+        this.courseList = courseList;
+    }
+
+    public List<Student_Course> getCourse(){
+        return DataSupport.where("news_id = ?", String.valueOf(id)).find(Student_Course.class);
+    }
+
+    ///////////学号
     public int getId() {
         return id;
     }
@@ -27,28 +43,13 @@ public class Student
         this.id = id;
     }
 
-    ///////////学号
-    public String getStudent_number() {
-        return student_number;
-    }
-
-    public void setStudent_number(String student_number) {
-        if(student_number==null)
-            this.student_number="未填写学号";
-        else
-            this.student_number = student_number;
-    }
-
-    ///////////姓名
+    ////////////年龄
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
-        if(name==null)
-            this.student_number="未填写姓名";
-        else
-            this.name = name;
+        this.name = name;
     }
 
     ////////////年龄
@@ -67,9 +68,9 @@ public class Student
 
     public void setClass_number(String class_number) {
         if(class_number==null)
-            this.student_number="未填写班级";
+            this.class_number="未填写班级";
         else
-            this.class_number = class_number;
+        this.class_number = class_number;
     }
 
     //////////学院
@@ -79,19 +80,19 @@ public class Student
 
     public void setCollege_name(String college_name) {
         if(college_name==null)
-            this.student_number="未填写学院";
+            this.college_name="未填写学院";
         else
-            this.college_name = college_name;
+        this.college_name = college_name;
     }
 
     ///////////座右铭
     public String getText() {
-        return text;
-    }
+    return text;
+}
 
     public void setText(String text) {
         if(text==null)
-            this.student_number="请说出你的座右铭";
+            this.text="请说出你的座右铭";
         else
             this.text = text;
     }
@@ -101,7 +102,7 @@ public class Student
     }
 
     public void setPassword(String password) {
-        this.password = password;
+            this.password = password;
     }
 
 }

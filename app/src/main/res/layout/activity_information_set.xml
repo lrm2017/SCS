@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -10,7 +11,7 @@
         >
 
     </LinearLayout>
-
+    
     <LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -31,7 +32,7 @@
                 android:text="取消"
                 android:textColor="#fff"
                 android:textSize="20dp"
-                />
+            />
 
             <TextView
                 android:id="@+id/title_title"
@@ -42,7 +43,7 @@
                 android:textSize="20dp"
                 android:gravity="center"
                 android:textColor="#fff"
-                />
+            />
             <Button
                 android:id="@+id/title_finish"
                 android:layout_width="wrap_content"
@@ -53,7 +54,7 @@
                 android:text="完成"
                 android:textColor="#fff"
                 android:textSize="20dp"
-                />
+            />
         </LinearLayout>
 
         <LinearLayout
@@ -83,7 +84,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textColor="#008b8b"
-                android:text="例：吴霞"
+                android:hint="例：吴霞"
                 />
 
         </LinearLayout>
@@ -116,7 +117,7 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:textColor="#008b8b"
-                android:text="例：19"
+                android:hint="例：19"
                 />
 
         </LinearLayout>
@@ -149,7 +150,7 @@
                 android:gravity="center"
                 android:textColor="#008b8b"
                 android:inputType="number"
-                android:text="例：41602240"
+                android:hint="例：41602240"
                 />
 
         </LinearLayout>
@@ -181,7 +182,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textColor="#008b8b"
-                android:text="例：智能1602"
+                android:hint="例：智能1602"
                 />
 
         </LinearLayout>
@@ -213,7 +214,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textColor="#008b8b"
-                android:text="例：自动化学院"
+                android:hint="例：自动化学院"
                 />
 
             <LinearLayout
@@ -237,14 +238,14 @@
                 <EditText
                     android:id="@+id/infor_text"
                     android:layout_width="200dp"
-                    android:layout_height="200dp"
+                    android:layout_height="150dp"
                     android:background="@drawable/biankuang"
                     android:padding="5dp"
                     android:textSize="18dp"
                     android:layout_gravity="center"
                     android:gravity="left"
                     android:textColor="#008b8b"
-                    android:text="例：I Love Eating！"
+                    android:hint="例：I Love Eating！"
                     />
 
             </LinearLayout>

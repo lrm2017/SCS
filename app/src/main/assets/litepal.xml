@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="demo" >
+    </dbname>
+
+    <version value="6" >
+    </version>
+
+    <list>
+        <mapping class="com.example.scs.Student"></mapping>
+        <mapping class="com.example.scs.Student_Course"></mapping>
+        <mapping class="com.example.scs.Course"></mapping>
+        <mapping class="com.example.scs.pro_course"></mapping>
+        <mapping class="com.example.scs.Commen_Course"></mapping>
+
+
+    </list>
+</litepal>
