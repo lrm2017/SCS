@@ -3,18 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Test1"/>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_below="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="180dp"
-        android:background="#5656"/>
     <Button
         android:layout_below="@+id/imageView"
         android:id="@+id/button"
@@ -34,6 +22,14 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="110dp"
         android:background="@drawable/back_logo" />
+
+    <Button
+        android:layout_below="@+id/imageView"
+        android:id="@+id/query2_data"
+        android:text="delect"
+        android:layout_marginTop="400dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 
 

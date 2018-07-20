@@ -1,4 +1,4 @@
-package com.example.mark.together;
+package com.example.scs;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.scs.R;
 
 public class SuccessLogupActivity extends AppCompatActivity {
 

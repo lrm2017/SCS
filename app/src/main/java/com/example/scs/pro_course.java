@@ -1,15 +1,17 @@
 package com.example.scs;
 
+
+
 import org.litepal.crud.LitePalSupport;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by 夏目斑熊 on 2018/7/20.
+ * Created by 夏目斑熊 on 2018/7/19.
  */
 
-public class Commen_Course extends LitePalSupport{
+public class pro_course extends LitePalSupport {
     private int id;//课程号
     private String courseId;
     private String course_name;//课程名字
@@ -19,21 +21,17 @@ public class Commen_Course extends LitePalSupport{
     private List<Student> courseList=new ArrayList<Student>();//一个课对应多个学生
     private int imageId;
 
+    /*public pro_course(String course_name,int imageId){
+        this.course_name=course_name;
+        this.imageId=imageId;
+    }*/
+
     public String getCourseId() {
         return courseId;
     }
 
     public void setCourseId(String courseId) {
         this.courseId = courseId;
-    }
-
-    public Commen_Course(String courseId, String course_name, String course_coad, String teacher, int imageId, String time){
-        this.courseId=courseId;
-        this.course_name=course_name;
-        this.course_coad=course_coad;
-        this.teacher=teacher;
-        this.imageId=imageId;
-        this.time=time;
     }
 
     public int getImageId() {

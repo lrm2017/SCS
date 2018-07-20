@@ -1,14 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/p34108"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Test4"/>
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/test3_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#80008b8b">
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/p1207027"/>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:text="课号"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:text="课程名"
+                android:layout_weight="1"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:text="学分"
+                android:gravity="center"/>
+            <TextView
+                android:layout_marginRight="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:text="添加"
+                android:gravity="center"/>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:background="#38ef84"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/test3_top">
+
+
+            <ListView
+                android:id="@+id/test4_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+            </ListView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>

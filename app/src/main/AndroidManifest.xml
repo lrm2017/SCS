@@ -20,7 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BottomActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".NewCounter"></activity>
+        <activity android:name=".SuccessLogupActivity"></activity>
+        <activity android:name=".LoginMainActivity"></activity>
     </application>
 
 </manifest>
